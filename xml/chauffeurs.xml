@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<chauffeurs>
+    <chauffeur>
+        <nom>BON</nom>
+        <prenom>JEAN</prenom>
+        <telephone>418-666-1212</telephone>
+        <numPermis>BONJ19080506-23</numPermis>
+        <refVeh>TX-01</refVeh>
+    </chauffeur>
+    <chauffeur>
+        <nom>LEBEAU</nom>
+        <prenom>JACQUES</prenom>
+        <telephone>418-895-6363</telephone>
+        <numPermis>LEBJ198505-26</numPermis>
+        <refVeh>TX-02</refVeh>
+    </chauffeur>
+</chauffeurs>

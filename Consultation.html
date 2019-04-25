@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>TP4- Taxi Limoilou</title>
+    <meta http-equiv="Content-Type" content="text/html; charset='utf-8'"> " />
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logotaxi.gif" alt="taxi.png" />
+                </a>
+            </div>
+
+            <div class="title">
+                <marquee height="1000" scrolldelay="2" scrollamount="2">
+                    <img src="img/telephone.jpg" width="200" height="125px" alt="" />
+                    <img src="img/taxi1.jpg" width="200" height="125px" alt="" />
+                    <img src="img/taxi2.jpg" width="200" height="125px" alt="" />
+                    <img src="img/taxi3.jpg" width="200" height="125px" alt="" />
+                    <img src="img/taxi4.jpg" width="200" height="125px" alt="" />
+                    <img src="img/taxi5.jpg" width="200" height="125px" alt="" />
+                    <img src="img/telephone.jpg" width="200" height="125px" alt="" />
+                </marquee>
+            </div>
+
+        </div>
+
+        <div class="breadcrumb">
+
+            &#160;&#160;&#160;&#160;&#160;
+            <a href="index.html">Accueil</a> &#160;&#160;&#160;&#160;&#160; / &#160;&#160;&#160;&#160;&#160; Consulter les donn&eacutees
+
+        </div>
+
+
+
+
+        <div class="main">
+
+            <!-- circuit de navette-->
+            <div id="circuitNavette" class="hidden navette">
+                <img src="img/honda.jpg" alt="pas d'images" id="navette" />
+
+            </div>
+
+            <!-- Menu qui d&eacuteterminera quelle section qui sera affich&eacutee entre: -->
+            <!-- sectionChauffeur, sectionNavette, sectionTaxi-->
+
+            <p>
+                <h4>Choisissez le type de donn&eacutees &agrave consulter : </h4>
+                <FORM NAME="menu">
+                    <INPUT TYPE="radio" NAME="choix" VALUE="sectionChauffeur" />Chauffeurs
+                    <INPUT TYPE="radio" NAME="choix" VALUE="SNavette" />Navettes
+                    <INPUT TYPE="radio" NAME="choix" VALUE="sectionTaxi" />Taxis
+                </FORM>
+            </p>
+
+            <div class="tableau">
+                <div id="sectionChauffeur" class="show">
+                    <form action="">
+                        <p>
+                            <label for="listeChauffeur">Choisissez un chauffeur :</label>
+                            <br/>
+                            <select name="listeChauffeur" id="listeChauffeur" onchange="getChauffeurAuto()">
+                                <option>BON JEAN</option>
+                                <option>LEBEAU JACQUES</option>
+                            </select>
+                        </p>
+                    </form>
+                    <form class="donnees_chauffeurs" action="" name="chauf">
+
+                        <table>
+                            <h2>Donn&eacutees sur les chauffeurs</h2>
+                            <tr>
+                                <td>
+                                    <label for="nomCh">Nom :</label>
+                                </td>
+                                <td>
+                                    <input size="50" type="text" name="nomCh" id="nomCh" value="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="prenomCh">Pr&eacutenom :</label>
+                                </td>
+                                <td>
+                                    <input size="50" type="text" name="prenomCh" id="prenomCh" value="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="telephone">T&eacutel&eacutephone :</label>
+                                </td>
+                                <td>
+                                    <input size="50" type="text" name="telephone" id="telephone" value="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="numPermis">Num&eacutero de permis :</label>
+                                </td>
+                                <td>
+                                    <input size="50" type="text" name="numPermis" id="numPermis" value="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="refVeh">R&eacutef&eacuterence v&eacutehicule :</label>
+                                </td>
+                                <td>
+                                    <input size="50" type="text" name="refVeh" id="refVeh" value="" />
+                                </td>
+                            </tr>
+
+                        </table>
+
+                    </form>
+                </div>
+
+
+                <div id="SNavette" class="show">
+                    <h2>Navette</h2>
+                    <div id="InfoNavette"></div>
+                </div>
+
+                <div id="sectionTaxi" class="show">
+
+                <img width="200" height="125px" alt="" id="floatRight"/>
+
+                    <form action="" name="ajax" method="POST" action="">
+                        <p>
+                            <label for="listeTaxi">Choisissez un taxi :</label>
+                            <br/>
+                            <select name="listeTaxi" id="listeTaxi" onchange="submitForm()">
+
+                                <option>TX-01</option>
+                                <option>TX-02</option>
+
+                            </select>
+                        </p>
+                    
+                    <form class="donnees_taxis" action="">
+                        <h2>Donn&eacutees sur les taxis</h2>
+                        <table>
+                            <tr>
+                                <td>
+                                    <label for="numTaxi">Num&eacutero de taxi :</label>
+                                </td>
+                                <td>
+                                    <input size="50" type="text" name="numTaxi" id="numTaxi" value="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="zone">Zone :</label>
+                                </td>
+                                <td>
+                                    <input size="50" type="text" name="zone" id="zone" value="" />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label for="immatriculation">Immatriculation :</label>
+                                </td>
+                                <td>
+                                    <input size="50" type="text" name="immatriculation" id="immatriculation" value="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="nbPlace">Nombre de places :</label>
+                                </td>
+                                <td>
+                                    <input size="50" type="text" name="nbPlace" id="nbPlace" value="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="marque">Marque :</label>
+                                </td>
+                                <td>
+                                    <input size="50" type="text" name="marque" id="marque" value="" />
+                                </td>
+                            </tr>
+                            <span id="id_photo"></span>
+                            <br>
+                            <!--Réaliser un effet de fondu au survol de l'image-->
+                            <script>
+                                // Faites le script pour gérer la transparence de la photo ici
+                            </script>
+
+
+                        </table>
+                        </form>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+
+            <p>&#169; Taxi Limoilou &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="mailto:naji.bricha.1@gmail.com">Pour nous joindre
+                </a>
+            </p>
+
+        </div>
+    </div>
+    <script src="js/Script.js" type="text/javascript"></script>
+</body>
+
+</html>

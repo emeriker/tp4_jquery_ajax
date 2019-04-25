@@ -1,0 +1,223 @@
+@CHARSET "utf-8";
+
+#floatRight  {
+    float: right;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+}
+
+body {
+	background-image: url("img/taxi3.jpg");
+	background-repeat: no-repeat;
+	background-size: 1920px 1080px;
+}
+
+a {
+	color: black;
+}
+
+.footer a {
+	color: gold;
+}
+
+a:hover {
+	color: brown;
+}
+
+.container {
+	width: 1000px;
+	min-height: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.header {
+	width: 100%;
+	height: 125px;
+	margin-top: 30px;
+	text-align: center;
+	line-height: 125px;
+	font-size: 60px;
+	color: gold;
+}
+
+.logo {
+	width: 200px;
+	height: 100%;
+	float: left;
+}
+
+.logo img {
+	width: 200px;
+	height: 100%;
+	border-radius: 10px;
+}
+
+.title {
+	width: 790px;
+	height: 100%;
+	float: right;
+	background-color: black;
+	border-radius: 10px;
+	opacity: 0.85;
+}
+
+.breadcrumb {
+	width: 100%;
+	height: 40px;
+	margin-top: 10px;
+	background-color: gold;
+	color: black;
+	border-radius: 10px;
+	opacity: 0.85;
+	font-size: 20px;
+	line-height: 35px;
+}
+
+.information {
+	float: left;
+	font-size: 20px;
+	padding: 15px;
+}
+
+.info1 {
+	width: 350px;
+	padding: 25px;
+	float: left;
+}
+
+.paiement {
+	margin-top: 200px;
+	float: left;
+}
+
+.info2 {
+	color: red;
+	float: left;
+	font-style: italic;
+}
+
+/* ****************Commandes ajoutées pour masquer les "tableau_cache" ******************/
+
+.tableau_cache_taxi {
+	display: none;
+}
+
+.tableau_cache_navette {
+	display: none;
+}
+
+.tableau_cache_chauffeur {
+	display: none;
+}
+
+/* ***************Commandes ajoutées pour masquer les sections ************************/
+
+.hide{
+	display: none;
+}
+
+.show{
+	display: block;
+}
+
+#sectionChauffeur {
+	
+}
+
+#sectionTaxi {
+	
+}
+
+/***************************************************************************************/
+
+.tableau th {
+	border-style: solid;
+	border-color: gold;
+	padding: 10px;
+	color: gold;
+	font-size: 20px;
+}
+
+.tableau td {
+	border-style: solid;
+	border-color: gold;
+	padding: 10px;
+	color: white;
+	font-size: 18px;
+}
+
+.tableau {
+	margin-left: 175px;
+}
+
+#formulaires {
+	margin-left: 30px;
+}
+
+.main {
+	width: 100%;
+	min-height: 550px;
+	float: left;
+	margin-top: 10px;
+	border-radius: 10px;
+	opacity: 0.85;
+	color: white;
+	background-color: black;
+	font-size: 20px;
+}
+
+.main h2 {
+	color: gold;
+}
+
+.footer {
+	width: 100%;
+	height: 50px;
+	background-color: black;
+	clear: both;
+	position: relative;
+	top: 10px;
+	text-align: center;
+	font-size: 150%;
+	color: gold;
+	line-height: 45px;
+	border-radius: 10px;
+	opacity: 0.85;
+}
+
+/***************************************************************************************/
+
+#circuitNavette {
+	background-color: darkorange;
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	right: 50px;
+	bottom: 50px;
+}
+
+#navette {
+	width: 75px;
+	height: 75px;
+}
+
+#navette .coin_1 {
+	float: left;
+	margin-top: 0px;
+}
+
+#navette .coin_2 {
+	float: right;
+	margin-top: 0px;
+}
+
+#navette .coin_3 {
+	float: right;
+	margin-top: 125px;
+}
+
+#navette .coin_4 {
+	float: left;
+	margin-top: 125px;
+}

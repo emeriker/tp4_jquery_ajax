@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navettes>
+	<navette>
+		<numNavette>NA-01</numNavette>
+		<immatriculation>YTU685</immatriculation>
+		<nbPlace>5</nbPlace>
+		<marque>TOYOTA</marque>
+	</navette>
+	<navette>
+		<numNavette>NA-02</numNavette>
+		<immatriculation>WER589</immatriculation>
+		<nbPlace>6</nbPlace>
+		<marque>HONDA</marque>
+	</navette>
+</navettes>

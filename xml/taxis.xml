@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxis>
+    <taxi>
+        <numTaxi>TX-01</numTaxi>
+        <zone>3.0</zone>
+        <immatriculation>AVD323</immatriculation>
+        <nbPlace>4</nbPlace>
+        <marque>TOYOTA</marque>
+        <photo>TOYOTA</photo>
+    </taxi>
+    <taxi>
+        <numTaxi>TX-02</numTaxi>
+        <zone>1.0</zone>
+        <immatriculation>ERT365</immatriculation>
+        <nbPlace>4</nbPlace>
+        <marque>HONDA</marque>
+        <photo>HONDA</photo>
+    </taxi>
+</taxis>
